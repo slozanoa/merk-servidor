@@ -10,7 +10,7 @@ conectarDB();
 //habilitar express json
 app.use(express.json({extended:true}));
 //puerto de app
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 //importar rutas
 app.use('/api/usuario', require('./router/usuarios'));
 app.use('/api/auth', require('./router/auth'));
@@ -19,6 +19,6 @@ app.use('/api/tareas', require('./router/tareas'));
 
 
 //arrancar la app
-app.listen(PORT, ()=>{
-    console.log(`El servidor está funvionando por el puerto ${PORT}`)
+app.listen(port, '0.0.0.0' ()=>{
+    console.log(`El servidor está funvionando por el puerto ${port}`)
 })
